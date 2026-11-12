@@ -16,3 +16,8 @@
   for = "/admin.html"
   [headers.values]
     Cache-Control = "no-store"
+
+# The Supabase project URL is public (it is also shipped to the browser in config.js),
+# so it should not be treated as a secret by Netlify's secrets scanner.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL"

@@ -33,7 +33,7 @@ Import repository atau deploy folder ini ke Netlify. Pada **Site configuration â
 
 | Variable | Nilai |
 |---|---|
-| `GUEST_PASSWORD` | `24hours` (ganti bila diperlukan) |
+| `GUEST_PASSWORD` | Password tamu pilihanmu (jangan tulis di repository) |
 | `SESSION_SECRET` | Secret acak minimal 32 byte |
 | `SUPABASE_URL` | Project URL Supabase |
 | `SUPABASE_SERVICE_ROLE_KEY` | Service role key Supabase |
@@ -69,7 +69,7 @@ Tes mencakup validasi isi cerita, token sesi bertanda tangan, deteksi manipulasi
 
 ## Catatan keamanan dan privasi
 
-- `24hours` adalah password awal sesuai brief; ganti lewat `GUEST_PASSWORD` jika perlu.
+- Password tamu hanya disimpan di environment variable `GUEST_PASSWORD` di Netlify; jangan pernah menuliskannya di repository.
 - Session guest ditandatangani server-side, tidak disimpan di LocalStorage, dan cookie HttpOnly berakhir setelah 24 jam.
 - `SUPABASE_SERVICE_ROLE_KEY` hanya dipakai fungsi server untuk insert cerita; jangan bocorkan.
 - Database tidak menghapus cerita otomatis. Admin dapat menghapus cerita manual dari dashboard.

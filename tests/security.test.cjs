@@ -23,6 +23,6 @@ test('session expires after 24 hours', () => {
 });
 
 test('compares passwords without throwing on unequal lengths', () => {
-  assert.equal(passwordsMatch('24hours', '24hours'), true);
-  assert.equal(passwordsMatch('24hours', '24hours!'), false);
+  assert.equal(passwordsMatch('test-pass', 'test-pass'), true);
+  assert.equal(passwordsMatch('test-pass', 'test-pass!'), false);
 });
