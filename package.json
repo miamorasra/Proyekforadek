@@ -1,0 +1,10 @@
+{
+  "name": "ruang-tenang-untuk-adek",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private venting space and romantic companion website",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test tests/*.test.cjs", "dev": "netlify dev" },
+  "dependencies": { "@supabase/supabase-js": "^2.57.0" },
+  "devDependencies": { "netlify-cli": "^23.0.0" }
+}

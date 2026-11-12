@@ -1,0 +1,1 @@
+exports.handler = async (event) => ({ statusCode: 200, headers: { 'Set-Cookie': 'adek_session=; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=0', 'Cache-Control': 'no-store' }, body: JSON.stringify({ ok: true }) });
